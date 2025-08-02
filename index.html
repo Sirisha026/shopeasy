@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Your One-Stop Online Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home" aria-label="ShopEasy Home">ShopEasy</a>
+            </div>
+            <div class="search-bar">
+                <label for="search-input" class="visually-hidden">Search products</label>
+                <input type="text" id="search-input" placeholder="Search for products..." aria-label="Search for products">
+                <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#service">Customer Service</a></li>
+                    <li><a href="#cart"><i class="fas fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+                    <li id="user-greeting-nav" style="display: none;">
+                        Hello, <span id="username-display-nav"></span>
+                    </li>
+                    <li><a href="#login" class="btn-login">Sign In</a></li>
+                    <li><a href="#signup" class="btn-signup">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="section">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <h1 id="hero-heading">Welcome to ShopEasy</h1>
+                <p>Discover amazing products at unbeatable prices</p>
+                <a href="#products" class="btn-shop">Shop Now</a>
+            </div>
+        </section>
+        <section class="categories" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 id="categories-heading">Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://th.bing.com/th/id/OIP.xMk-4sYRcd3uKBf6WeY4IAHaHa?w=153&h=180&c=7&r=0&o=7&dpr=1.7&pid=1.7&rm=3" alt="Electronics category">
+                        <h3>Electronics</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://th.bing.com/th/id/OIP.FmzczBZZmU3s3IVeOQR_mgHaEK?w=284&h=180&c=7&r=0&o=7&dpr=1.7&pid=1.7&rm=3" alt="Clothing category">
+                        <h3>Clothing</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://th.bing.com/th/id/OIP.FmzczBZZmU3s3IVeOQR_mgHaEK?w=284&h=180&c=7&r=0&o=7&dpr=1.7&pid=1.7&rm=3" alt="Home and Kitchen category">
+                        <h3>Home & Kitchen</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://th.bing.com/th/id/OIP.pt_qA846fb2KjFcaZbOzEQHaE7?w=235&h=180&c=7&r=0&o=7&dpr=1.7&pid=1.7&rm=3" alt="Beauty category">
+                        <h3>Beauty</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured-products" aria-labelledby="featured-products-heading">
+            <div class="container">
+                <h2 id="featured-products-heading">Featured Products</h2>
+                <div class="product-grid" id="featuredProducts">
+                </div>
+            </div>
+        </section>
+        <section class="brands" aria-labelledby="brands-heading">
+            <div class="container">
+                <h2 id="brands-heading">Popular Brands</h2>
+                <div class="brand-slideshow">
+                    <button class="prev-brand" aria-label="Previous Brand"><i class="fas fa-chevron-left"></i></button>
+                    <div class="brand-grid" id="brandGrid">
+                        <img src="https://www.bing.com/th/id/OIP.WfEmMWIV_I5jxZVCDMo7ZwHaD2?w=245&h=211&c=8&rs=1&qlt=70&o=7&cb=iavawebp1&dpr=1.7&pid=3.1&rm=3" alt="Samsung Brand logo" class="brand-logo">
+                        <img src="https://www.bing.com/th/id/OIP.e7aKMJYxEaX98z80a9AtbQHaEK?w=244&h=211&c=8&rs=1&qlt=70&o=7&cb=iavawebp1&dpr=1.7&pid=3.1&rm=3" alt="Olay brand logo" class="brand-logo">
+                        <img src="https://www.bing.com/th/id/OIP.gZ70zI-aqD6uWIcc76UMWQHaGB?w=260&h=211&c=8&rs=1&qlt=70&o=7&cb=iavawebp1&dpr=1.7&pid=3.1&rm=3" alt="LG brand logo" class="brand-logo">
+                        <img src="https://www.bing.com/th/id/OIP.sl4j-IS_zEBTjRNEbxaOrwHaEK?w=272&h=211&c=8&rs=1&qlt=70&o=7&cb=iavawebp1&dpr=1.7&pid=3.1&rm=3" alt="Sony brand logo" class="brand-logo">
+                    </div>
+                    <button class="next-brand" aria-label="Next Brand"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+<div class="tab-content" id="reviews" role="tabpanel">
+    <h3>Customer Reviews</h3>
+    <div class="review">
+        <div class="review-header">
+            <span class="reviewer">Alex Johnson</span>
+            <span class="review-date">October 15, 2023</span>
+            <span class="review-rating" aria-label="5 star review">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </span>
+        </div>
+        <div class="review-content">
+            <h4>Excellent product quality!</h4>
+            <p>This smartphone exceeded my expectations. The camera quality is outstanding and battery life lasts all day. Highly recommend!</p>
+        </div>
+    </div>
+    <div class="review">
+        <div class="review-header">
+            <span class="reviewer">Sarah Williams</span>
+            <span class="review-date">September 28, 2023</span>
+            <span class="review-rating" aria-label="4 star review">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </span>
+        </div>
+        <div class="review-content">
+            <h4>Great value for money</h4>
+            <p>The performance is smooth and the display is vibrant. The only minor issue is the fingerprint sensor could be more responsive.</p>
+        </div>
+    </div>
+</div>
+    <section id="products" class="section" style="display:none;">
+        <section class="product-listing" aria-labelledby="products-heading">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" aria-label="Filter by category">
+                            <option value="all">All</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="home">Home & Kitchen</option>
+                            <option value="beauty">Beauty</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range:</label>
+                        <select id="priceFilter" aria-label="Filter by price range">
+                            <option value="all">All</option>
+                            <option value="0-50">$0 - $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-500">$100 - $500</option>
+                            <option value="500+">$500+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortFilter">Sort By:</label>
+                        <select id="sortFilter" aria-label="Sort products">
+                            <option value="rating">Rating</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                    <button id="applyFilters" type="button">Apply</button>
+                </div>
+                <div class="product-grid" id="productList">
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="product-detail" class="section" style="display:none;">
+        <section class="product-detail" aria-labelledby="product-title">
+            <div class="container">
+                <div class="product-detail-grid">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="https://via.placeholder.com/500x500?text=Product+Image" alt="Product main image" id="mainImage">
+                        </div>
+                        <div class="thumbnail-images">
+                            <img src="https://via.placeholder.com/100x100?text=Thumbnail+1" alt="Product thumbnail 1">
+                            <img src="https://via.placeholder.com/100x100?text=Thumbnail+2" alt="Product thumbnail 2">
+                            <img src="https://via.placeholder.com/100x100?text=Thumbnail+3" alt="Product thumbnail 3">
+                            <img src="https://via.placeholder.com/100x100?text=Thumbnail+4" alt="Product thumbnail 4">
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h1 id="product-title">Premium Smartphone X1</h1>
+                        <div class="rating">
+                            <span class="stars" aria-label="4.5 star rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="review-count">(1,234 reviews)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$599.99</span>
+                            <span class="original-price">$699.99</span>
+                            <span class="discount">14% off</span>
+                        </div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i> In Stock (Only 5 left)
+                        </div>
+                        <div class="color-options">
+                            <h3>Color:</h3>
+                            <div class="colors">
+                                <span class="color-option active" style="background-color: #000;" aria-label="Black color"></span>
+                                <span class="color-option" style="background-color: #fff; border: 1px solid #ccc;" aria-label="White color"></span>
+                                <span class="color-option" style="background-color: #4285f4;" aria-label="Blue color"></span>
+                            </div>
+                        </div>
+                        <div class="size-options">
+                            <h3>Size:</h3>
+                            <select id="sizeSelect" aria-label="Select product size">
+                                <option value="">Select Size</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <h3>Quantity:</h3>
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus" type="button" aria-label="Decrease quantity"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" max="10" aria-label="Quantity">
+                                <button class="qty-btn plus" type="button" aria-label="Increase quantity"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-add-to-cart" type="button">Add to Cart</button>
+                            <button class="btn-buy-now" type="button">Buy Now</button>
+                            <button class="btn-wishlist" type="button"><i class="far fa-heart" aria-hidden="true"></i> Add to Wishlist</button>
+                        </div>
+                        <div class="delivery-options">
+                            <div class="delivery-option">
+                                <i class="fas fa-truck" aria-hidden="true"></i>
+                                <span>Free delivery on orders over $50</span>
+                            </div>
+                            <div class="delivery-option">
+                                <i class="fas fa-undo" aria-hidden="true"></i>
+                                <span>Free 30-day returns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-tabs">
+                    <div class="tabs" role="tablist">
+                        <button class="tab-btn active" data-tab="description" role="tab" aria-selected="true" aria-controls="description">Description</button>
+                        <button class="tab-btn" data-tab="specifications" role="tab" aria-selected="false" aria-controls="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews" role="tab" aria-selected="false" aria-controls="reviews">Reviews</button>
+                    </div>
+                    <div class="tab-content active" id="description" role="tabpanel">
+                        <h3>Product Description</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.</p>
+                    </div>
+                    <div class="tab-content" id="specifications" role="tabpanel">
+                        <h3>Product Specifications</h3>
+                        <table>
+                            <tr>
+                                <th>Brand</th>
+                                <td>Premium Brand</td>
+                            </tr>
+                            <tr>
+                                <th>Model</th>
+                                <td>X1</td>
+                            </tr>
+                            <tr>
+                                <th>Color</th>
+                                <td>Black, White, Blue</td>
+                            </tr>
+                            <tr>
+                                <th>Size</th>
+                                <td>Small, Medium, Large</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-content" id="reviews" role="tabpanel">
+                        <h3>Customer Reviews</h3>
+                        <div class="review">
+                            <div class="review-header">
+                                <span class="reviewer">John Doe</span>
+                                <span class="review-date">October 15, 2023</span>
+                                <span class="review-rating" aria-label="5 star review">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <div class="review-content">
+                                <h4>Great product!</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc eu nisl.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="related-products" aria-labelledby="related-products-heading">
+            <div class="container">
+                <h2 id="related-products-heading">You May Also Like</h2>
+                <div class="product-grid" id="relatedProducts">
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="cart" class="section" style="display:none;">
+        <section class="shopping-cart" aria-labelledby="cart-heading">
+            <div class="container">
+                <h1 id="cart-heading">Shopping Cart</h1>
+                <div class="cart-grid">
+                    <div class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span>FREE</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (8%):</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Order Total:</span>
+                                <span>$0.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-checkout" type="button">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="saved-items" aria-labelledby="saved-items-heading">
+            <div class="container">
+                <h2 id="saved-items-heading">Saved for Later</h2>
+                <div class="product-grid" id="savedItems">
+                    <div class="product-card">
+                        <img src="https://m.media-amazon.com/images/I/51ABDkq99LL._AC_UL480_FMwebp_QL65_.jpg" alt="FEIDUSUN Sunglasses">
+                        <h3>FEIDUSUN Sunglasses</h3>
+                        <div class="price">$204.00</div>
+                        <button class="btn-move-to-cart" type="button">Move to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="login" class="section" style="display:none;">
+        <section class="auth-section" aria-labelledby="login-heading">
+            <div class="container">
+                <div class="auth-form">
+                    <h1 id="login-heading">Sign In</h1>
+                    <form id="loginForm" novalidate>
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" name="email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="password" required aria-required="true">
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn-submit">Sign In</button>
+                        <div id="user-greeting" style="display: none;">
+                           Hello, <span id="username-display"></span>
+                        </div>
+                    </form>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn-social google" type="button">
+                            <i class="fab fa-google" aria-hidden="true"></i> Continue with Google
+                        </button>
+                        <button class="btn-social facebook" type="button">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i> Continue with Facebook
+                        </button>
+                        <button class="btn-social apple" type="button">
+                            <i class="fab fa-apple" aria-hidden="true"></i> Continue with Apple
+                        </button>
+                    </div>
+                    <div class="auth-footer">
+                        <p>New to ShopEasy? <a href="#signup">Create an account</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="signup" class="section" style="display:none;">
+        <section class="auth-section" aria-labelledby="signup-heading">
+            <div class="container">
+                <div class="auth-form">
+                    <h1 id="signup-heading">Create Account</h1>
+                    <form id="signupForm" novalidate>
+                        <div class="form-group">
+                            <label for="signup-name">Your name</label>
+                            <input type="text" id="signup-name" name="name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" name="email" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-address">Address</label>
+                            <input type="text" id="signup-address" name="address" required aria-required="true" placeholder="Your address">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="At least 6 characters" required aria-required="true">
+                            <span class="password-hint">Passwords must be at least 6 characters.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Re-enter password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required aria-required="true">
+                        </div>
+                        <button type="submit" class="btn-submit">Create your ShopEasy account</button>
+                    </form>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button class="btn-social google" type="button">
+                            <i class="fab fa-google" aria-hidden="true"></i> Continue with Google
+                        </button>
+                        <button class="btn-social facebook" type="button">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i> Continue with Facebook
+                        </button>
+                        <button class="btn-social apple" type="button">
+                            <i class="fab fa-apple" aria-hidden="true"></i> Continue with Apple
+                        </button>
+                    </div>
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="#login">Sign in</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Add this checkout modal at the bottom of the body -->
+<div id="checkoutModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Your Purchase</h2>
+            <div class="form-group">
+                <label>Delivery Address</label>
+                <span id="displayAddress"></span>
+            </div>
+            <div class="payment-options">
+                <div class="payment-tabs">
+                    <button class="payment-tab active" data-tab="phonepe">PhonePe</button>
+                    <button class="payment-tab" data-tab="googlepay">Google Pay</button>
+                    <button class="payment-tab" data-tab="netbanking">Netbanking</button>
+                    <button class="payment-tab" data-tab="cod">Cash on Delivery</button>
+                </div>
+                <div class="payment-content active" id="phonepe">
+                    <p>Scan the QR code below to pay with PhonePe:</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=phonepe://pay" alt="PhonePe QR Code">
+                </div>
+                <div class="payment-content" id="googlepay" style="display:none;">
+                    <p>Scan the QR code below to pay with Google Pay:</p>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=googlepay://pay" alt="Google Pay QR Code">
+                </div>
+                <div class="payment-content" id="netbanking" style="display:none;">
+                    <form id="netbankingForm">
+                        <div class="form-group">
+                            <label for="bankSelect">Select Bank</label>
+                            <select id="bankSelect" required>
+                                <option value="">Choose your bank</option>
+                                <option value="sbi">SBI</option>
+                                <option value="hdfc">HDFC</option>
+                                <option value="icici">ICICI</option>
+                                <option value="axis">Axis</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="netbankingUser">User ID</label>
+                            <input type="text" id="netbankingUser" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="netbankingPassword">Password</label>
+                            <input type="password" id="netbankingPassword" required>
+                        </div>
+                        <button type="submit" class="btn-pay">Pay Now</button>
+                    </form>
+                </div>
+                <div class="payment-content" id="cod" style="display:none;">
+                    <p>Your order will be placed with Cash on Delivery.</p>
+                    <button type="button" class="btn-pay">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" aria-label="Footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for all your needs</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 ShopEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    // Payment tab switching
+    document.querySelectorAll('.payment-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.payment-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.payment-content').forEach(c => c.style.display = 'none');
+            tab.classList.add('active');
+            document.getElementById(tab.getAttribute('data-tab')).style.display = 'block';
+        });
+    });
+
+    // Show checkout modal and address
+    document.querySelector('.btn-checkout').addEventListener('click', function() {
+        const address = localStorage.getItem('userAddress') || 'No address found';
+        document.getElementById('displayAddress').textContent = address;
+        document.getElementById('checkoutModal').style.display = 'block';
+    });
+
+    // Hide checkout modal
+    document.querySelector('#checkoutModal .close').addEventListener('click', function() {
+        document.getElementById('checkoutModal').style.display = 'none';
+    });
+
+    // SIGN UP logic
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('signup-name').value;
+        const email = document.getElementById('signup-email').value;
+        const address = document.getElementById('signup-address').value;
+        localStorage.setItem('userName', name);
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userAddress', address);
+
+        // Show greeting
+        document.getElementById('username-display-nav').textContent = name || email;
+        document.getElementById('user-greeting-nav').style.display = 'inline-block';
+
+        // Hide signup form and show home
+        document.getElementById('signup').style.display = 'none';
+        document.getElementById('home').style.display = 'block';
+    });
+
+    // SIGN IN logic
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('login-email').value;
+        localStorage.setItem('userEmail', email);
+
+        // Show greeting
+        document.getElementById('username-display-nav').textContent = email;
+        document.getElementById('user-greeting-nav').style.display = 'inline-block';
+
+        // Hide login form and show home
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('home').style.display = 'block';
+    });
+   function updateGreetingBar(isSignedIn) {
+    const greetingNav = document.getElementById('user-greeting-nav');
+    const usernameDisplayNav = document.getElementById('username-display-nav');
+    const signInBtn = document.querySelector('.btn-login');
+    const signUpBtn = document.querySelector('.btn-signup');
+
+    if (isSignedIn) {
+        greetingNav.style.display = 'inline-block';
+        usernameDisplayNav.textContent = 'Hello 😊';
+        signInBtn.style.display = 'none';
+        signUpBtn.textContent = 'Sign Up';
+        signUpBtn.classList.remove('btn-signout');
+        signUpBtn.classList.add('btn-signup');
+        signUpBtn.style.display = 'inline-block';
+        signUpBtn.onclick = null;
+    } else {
+        greetingNav.style.display = 'none';
+        signInBtn.style.display = 'inline-block';
+        signUpBtn.textContent = 'Sign Up';
+        signUpBtn.classList.remove('btn-signout');
+        signUpBtn.classList.add('btn-signup');
+        signUpBtn.style.display = 'inline-block';
+        signUpBtn.onclick = null;
+    }
+}
+
+// SIGN UP logic
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('signup-name').value;
+    const email = document.getElementById('signup-email').value;
+    const address = document.getElementById('signup-address').value;
+    localStorage.setItem('userName', name);
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userAddress', address);
+    localStorage.setItem('currentUser', JSON.stringify({ name, email }));
+    updateGreetingBar(true);
+
+    document.getElementById('signup').style.display = 'none';
+    document.getElementById('home').style.display = 'block';
+});
+
+// SIGN IN logic
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('currentUser', JSON.stringify({ email }));
+    updateGreetingBar(true);
+
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('home').style.display = 'block';
+});
+
+// On page load, show greeting if already signed in
+window.addEventListener('DOMContentLoaded', function() {
+    const currentUser = localStorage.getItem('currentUser');
+    updateGreetingBar(!!currentUser);
+});
+    </script>
+</body>
+</html>
